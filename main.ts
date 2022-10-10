@@ -1,22 +1,33 @@
 namespace SpriteKind {
-    export const playerProt = SpriteKind.create() // making a new spritekind to not kill you when you fire
+    export const playerProt = SpriteKind.create()
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    playerProjectile = sprites.createProjectileFromSprite(assets.image`placeholder2`, player, 0, -50) //player firing
-    playerProjectile.setKind(SpriteKind.playerProt) //protjectile different so you dont die when you fire
-    pause(250) //not spammy projectiles
-    playerProjectile.setFlag(SpriteFlag.AutoDestroy, true) //should destroy the player protjectile after passing top
+    // player firing
+    playerProjectile = sprites.createProjectileFromSprite(assets.image`placeholder2`, player, 0, -50)
+    // protjectile different so you dont die when you fire
+    playerProjectile.setKind(SpriteKind.playerProt)
+    // not spammy projectiles
+    pause(250)
+    // should destroy the player protjectile after passing top
+    playerProjectile.setFlag(SpriteFlag.AutoDestroy, true)
 })
 info.onLifeZero(function () {
-    game.over(false, effects.melt) //gane over when life hits 0
+    // gane over when life hits 0
+    game.over(false, effects.melt)
 })
-let playerProjectile: Sprite = null //dont worry about
-let player: Sprite = null //dont worry about
-effects.starField.startScreenEffect() //making stars
-//the title screen and controls
+let playerProjectile: Sprite = null
+let player: Sprite = null
+// making stars
+effects.starField.startScreenEffect()
+// the title screen and controls
 game.splash("welcome", "arrow keys move, A fire")
-player = sprites.create(assets.image`Placeholder`, SpriteKind.Player) //player sprite
-controller.moveSprite(player, 75, 0) //moving player sprite
-player.setPosition(75, 100) //player position at start
-player.setStayInScreen(true) //the player cant go off screen
-info.setLife(3) //life count
+// player sprite
+player = sprites.create(assets.image`Placeholder`, SpriteKind.Player)
+// moving player sprite
+controller.moveSprite(player, 75, 0)
+// player position at start
+player.setPosition(75, 100)
+// the player cant go off screen
+player.setStayInScreen(true)
+// life count
+info.setLife(3)
