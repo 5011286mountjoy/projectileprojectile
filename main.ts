@@ -36,8 +36,8 @@ info.setLife(3)
 let boss = sprites.create(assets.image`bossplaceholder`, SpriteKind.Enemy)
 boss.setPosition(75, 25)
 boss.setStayInScreen(true)
+music.setVolume(51)
 forever(function () {
-    music.setVolume(51)
     music.playMelody("G B A G C5 B A B ", 125)
 })
 game.onUpdateInterval(500, function () {
