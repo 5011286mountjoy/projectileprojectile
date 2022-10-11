@@ -16,6 +16,7 @@ info.onLifeZero(function () {
     // game over when life hits 0
     game.over(false, effects.melt)
 })
+let bossProjectile: Sprite = null
 let playerProjectile: Sprite = null
 let player: Sprite = null
 // making stars
@@ -42,5 +43,5 @@ forever(function () {
 })
 game.onUpdateInterval(500, function () {
     boss.x += randint(-5, 5)
-    let bossProjectile = sprites.createProjectileFromSprite(assets.image`BOSSPROJECTILE`, boss, 0, 50)
+    bossProjectile = sprites.createProjectileFromSprite(assets.image`BOSSPROJECTILE`, boss, 0, 50)
 })
