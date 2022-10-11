@@ -2,6 +2,7 @@ namespace SpriteKind {
     export const playerProt = SpriteKind.create()
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 1600, 1, 255, 0, 300, SoundExpressionEffect.None, InterpolationCurve.Curve), SoundExpressionPlayMode.UntilDone)
     // player firing
     playerProjectile = sprites.createProjectileFromSprite(assets.image`placeholder2`, player, 0, -50)
     // protjectile different so you dont die when you fire
@@ -35,6 +36,10 @@ info.setLife(3)
 let boss = sprites.create(assets.image`bossplaceholder`, SpriteKind.Enemy)
 boss.setPosition(75, 25)
 boss.setStayInScreen(true)
+forever(function () {
+    music.setVolume(51)
+    music.playMelody("G B A G C5 B A B ", 125)
+})
 game.onUpdateInterval(500, function () {
     boss.x += randint(-5, 5)
 })
