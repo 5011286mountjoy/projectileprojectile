@@ -65,3 +65,9 @@ forever(function () {
 game.onUpdateInterval(500, function () {
     boss.x += randint(-5, 5)
 })
+game.onUpdateInterval(5000, function () {
+    bossProjectile = sprites.createProjectileFromSprite(assets.image`Lime`, boss, -15, 50)
+    bossProjectile = sprites.createProjectileFromSprite(assets.image`Lime`, boss, 0, 50)
+    bossProjectile = sprites.createProjectileFromSprite(assets.image`Lime`, boss, 15, 50)
+    bossProjectile.setKind(SpriteKind.bossProt)
+})
