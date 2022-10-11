@@ -35,5 +35,5 @@ info.setLife(3)
 let boss = sprites.create(assets.image`bossplaceholder`, SpriteKind.Enemy)
 boss.setPosition(75, 25)
 game.onUpdateInterval(500, function () {
-    boss.x += randint(-5,5)
+    boss.x += randint(-5, 5)
 })
