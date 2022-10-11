@@ -12,7 +12,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     playerProjectile.setFlag(SpriteFlag.AutoDestroy, true)
 })
 info.onLifeZero(function () {
-    // gane over when life hits 0
+    // game over when life hits 0
     game.over(false, effects.melt)
 })
 let playerProjectile: Sprite = null
