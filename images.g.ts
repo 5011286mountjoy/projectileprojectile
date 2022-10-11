@@ -97,6 +97,17 @@ c66666c6666666c
 . . . . . . c c c . . . . . . 
 . . . . . . . c . . . . . . . 
 `;
+            case "image6":
+            case "Laser":return img`
+. . . b b . . . 
+. . b 9 9 b . . 
+. . b 1 1 b . . 
+. . b 9 9 b . . 
+. . b 6 6 b . . 
+. . c 6 6 c . . 
+. . c 8 8 c . . 
+. . . f f . . . 
+`;
         }
         return null;
     })

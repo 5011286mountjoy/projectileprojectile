@@ -4,7 +4,7 @@ namespace SpriteKind {
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 1600, 1, 255, 0, 300, SoundExpressionEffect.None, InterpolationCurve.Curve), SoundExpressionPlayMode.UntilDone)
     // player firing
-    playerProjectile = sprites.createProjectileFromSprite(assets.image`placeholder2`, player, 0, -50)
+    playerProjectile = sprites.createProjectileFromSprite(assets.image`Laser`, player, 0, -50)
     // protjectile different so you dont die when you fire
     playerProjectile.setKind(SpriteKind.playerProt)
     // should destroy the player protjectile after passing top

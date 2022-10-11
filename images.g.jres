@@ -24,6 +24,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "playerSprite"
     },
+    "image6": {
+        "data": "hwQIAAgAAAAAAAAAAAAAALC7ywybkWb4m5Fm+LC7ywwAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Laser"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
