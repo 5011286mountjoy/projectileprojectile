@@ -1,5 +1,6 @@
 namespace SpriteKind {
     export const playerProt = SpriteKind.create()
+    export const bossProt = SpriteKind.create()
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 1600, 1, 255, 0, 300, SoundExpressionEffect.None, InterpolationCurve.Curve), SoundExpressionPlayMode.UntilDone)
@@ -15,6 +16,12 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 info.onLifeZero(function () {
     // game over when life hits 0
     game.over(false, effects.melt)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.bossProt, function (sprite, otherSprite) {
+    info.changeLifeBy(-1)
+    player.setFlag(SpriteFlag.Ghost, true)
+    pause(2000)
+    player.setFlag(SpriteFlag.Ghost, false)
 })
 let bossProjectile: Sprite = null
 let playerProjectile: Sprite = null
@@ -38,10 +45,13 @@ let boss = sprites.create(assets.image`BOSS`, SpriteKind.Enemy)
 boss.setPosition(75, 25)
 boss.setStayInScreen(true)
 music.setVolume(51)
+game.onUpdateInterval(1000, function () {
+    bossProjectile = sprites.createProjectileFromSprite(assets.image`BOSSPROJECTILE`, boss, 0, 50)
+    bossProjectile.setKind(SpriteKind.bossProt)
+})
 forever(function () {
     music.playMelody("G B A G C5 B A B ", 125)
 })
 game.onUpdateInterval(500, function () {
     boss.x += randint(-5, 5)
-    bossProjectile = sprites.createProjectileFromSprite(assets.image`BOSSPROJECTILE`, boss, 0, 50)
 })
