@@ -46,7 +46,7 @@ boss.setPosition(75, 25)
 boss.setStayInScreen(true)
 music.setVolume(51)
 game.onUpdateInterval(1000, function () {
-    bossProjectile = sprites.createProjectileFromSprite(assets.image`BOSSPROJECTILE`, boss, 0, 50)
+    bossProjectile = sprites.createProjectileFromSprite(assets.image`BOSSPROJECTILE`, boss, randint(-5,5), 50)
     bossProjectile.setKind(SpriteKind.bossProt)
 })
 forever(function () {
