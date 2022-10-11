@@ -33,6 +33,25 @@ c b d d d d d 5 5 5 5 5 5 5 b .
 . . c 3 3 c . . 
 . . . f f . . . 
 `;
+            case "image3":
+            case "bossplaceholder":return img`
+...cccccccccccccccccc...
+..cd5555555555555555dc..
+.c55555555555555555555c.
+.c55333333333333333355c.
+.c53333333333333333335c.
+.c53333333333333333335c.
+c333cccccccccccccccc333c
+c55c3555555555555553c55c
+c55c5555555555555555c55c
+c55c5555555555555555c55c
+c55c5555555555555555c55c
+c35c5555555555555555c53c
+cc33333333333333333333cc
+cc33333333333333333333cc
+cccccccccccccccccccccccc
+..cbbc............cbbc..
+`;
         }
         return null;
     })

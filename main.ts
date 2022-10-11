@@ -31,3 +31,4 @@ player.setPosition(75, 100)
 player.setStayInScreen(true)
 // life count
 info.setLife(3)
+let mySprite = sprites.create(assets.image`bossplaceholder`, SpriteKind.Player)

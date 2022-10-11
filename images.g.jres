@@ -9,6 +9,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "placeholder2"
     },
+    "image3": {
+        "data": "hwQYABAAAAAAAADMzMzMDADMzFNVNcwMwFVVU1VVM8zcVTPDzMwzvFw1MzxVVTO8XDUzXFVVM8xcNTNcVVUzDFw1M1xVVTMMXDUzXFVVMwxcNTNcVVUzDFw1M1xVVTMMXDUzXFVVMwxcNTNcVVUzDFw1M1xVVTMMXDUzXFVVMwxcNTNcVVUzDFw1M1xVVTMMXDUzXFVVMwxcNTNcVVUzzFw1MzxVVTO83FUzw8zMM7zAVVVTVVUzzADMzFNVNcwMAAAAzMzMzAw=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "bossplaceholder"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
