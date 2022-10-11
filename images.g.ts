@@ -52,6 +52,33 @@ cc33333333333333333333cc
 cccccccccccccccccccccccc
 ..cbbc............cbbc..
 `;
+            case "image4":
+            case "BOSS":return img`
+..cccc.........
+.c7776c........
+c67776ccccccc..
+c67776c677777c.
+c67776c7777766c
+c67776c6666666c
+c67776cccccc66c
+c67776c77776ccc
+c67776c777776c.
+c67776c777776c.
+c67776c777776c.
+c67776c777776c.
+c67776c777776c.
+c67776c777776c.
+c67776c777776c.
+c67766c777776c.
+c66666cccccccc.
+c66666c677777c.
+c66666c7777766c
+c66666c6666666c
+c66666c6666666c
+c66666c6666666c
+.cccccccccccccc
+.cbbc.....cbbc.
+`;
         }
         return null;
     })

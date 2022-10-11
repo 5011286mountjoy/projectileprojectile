@@ -14,6 +14,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "bossplaceholder"
     },
+    "image4": {
+        "data": "hwQPABgAAAAAzMzMzMzMzMzMzADAZmZmZmZmZmZmZsx8d3d3d3d3d2ZmZrx8d3d3d3d3d2ZmZrx8d3d3d3d3Z2ZmZsxsZmZmZmZmZmZmZgzAzMzMzMzMzMzMzAwAbGd8d3d3d2xnZgwAfGd8d3d3d3xnZgwAfGd8d3d3d3xnZgwAfGd8d3d3d3xnZswAfGdsd3d3d3xnZrwAfGbGZmZmZnxmZrwAwGbGzMzMzMxmZswAAMzMAAAAAADMzAw=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "BOSS"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
