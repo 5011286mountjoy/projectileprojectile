@@ -34,6 +34,7 @@ info.setLife(3)
 // boss stuff
 let boss = sprites.create(assets.image`bossplaceholder`, SpriteKind.Enemy)
 boss.setPosition(75, 25)
+boss.setStayInScreen(true)
 game.onUpdateInterval(500, function () {
     boss.x += randint(-5, 5)
 })
