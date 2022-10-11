@@ -19,10 +19,11 @@ info.onLifeZero(function () {
 })
 sprites.onOverlap(SpriteKind.playerProt, SpriteKind.Enemy, function (sprite, otherSprite) {
     info.changeScoreBy(1)
-    sprite.destroy()
+    sprite.destroy(effects.disintegrate, 150)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.bossProt, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
+    otherSprite.destroy(effects.disintegrate, 150)
     player.setFlag(SpriteFlag.Ghost, true)
     pause(2000)
     player.setFlag(SpriteFlag.Ghost, false)
