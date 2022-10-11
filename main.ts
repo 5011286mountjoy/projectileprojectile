@@ -33,7 +33,7 @@ player.setStayInScreen(true)
 // life count
 info.setLife(3)
 // boss stuff
-let boss = sprites.create(assets.image`bossplaceholder`, SpriteKind.Enemy)
+let boss = sprites.create(assets.image`BOSS`, SpriteKind.Enemy)
 boss.setPosition(75, 25)
 boss.setStayInScreen(true)
 music.setVolume(51)

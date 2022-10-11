@@ -52,33 +52,6 @@ cc33333333333333333333cc
 cccccccccccccccccccccccc
 ..cbbc............cbbc..
 `;
-            case "image4":
-            case "BOSS":return img`
-..cccc.........
-.c7776c........
-c67776ccccccc..
-c67776c677777c.
-c67776c7777766c
-c67776c6666666c
-c67776cccccc66c
-c67776c77776ccc
-c67776c777776c.
-c67776c777776c.
-c67776c777776c.
-c67776c777776c.
-c67776c777776c.
-c67776c777776c.
-c67776c777776c.
-c67766c777776c.
-c66666cccccccc.
-c66666c677777c.
-c66666c7777766c
-c66666c6666666c
-c66666c6666666c
-c66666c6666666c
-.cccccccccccccc
-.cbbc.....cbbc.
-`;
             case "image5":
             case "playerSprite":return img`
 . . . . . . . . . . . . . . . 
@@ -107,6 +80,25 @@ c66666c6666666c
 . . 9 9 9 9 . . 
 . . 9 9 9 9 . . 
 . . . 9 9 . . . 
+`;
+            case "image4":
+            case "BOSS":return img`
+. . . . . . . . . . . . . . . . 
+. . . . 1 1 1 1 1 1 1 1 . . . . 
+. . . 1 d 1 1 1 1 1 1 c 1 . . . 
+. . 1 c d 1 1 1 1 1 1 c c 1 . . 
+. 1 c c d d d d d d 1 c c d 1 d 
+. 1 c 1 d d d d d d d b c d 1 1 
+. 1 1 d b b d b b b d d b d 1 1 
+. 1 d b b b d b b b b d 1 1 1 1 
+. d d 1 1 1 d 1 1 1 1 1 d 1 1 1 
+. d d d d d d f d d d f d 1 d d 
+. d d d d d d f d d f d d d 1 d 
+. d d d d d d f f f d d d d d d 
+. d f f f f d d d d f f f d d d 
+. . f f f f f d d f f f f f d . 
+. . . f f f . . . . f f f f . . 
+. . . . . . . . . . . . . . . . 
 `;
         }
         return null;
