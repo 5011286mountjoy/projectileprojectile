@@ -6,10 +6,10 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     playerProjectile = sprites.createProjectileFromSprite(assets.image`placeholder2`, player, 0, -50)
     // protjectile different so you dont die when you fire
     playerProjectile.setKind(SpriteKind.playerProt)
-    // not spammy projectiles
-    pause(250)
     // should destroy the player protjectile after passing top
     playerProjectile.setFlag(SpriteFlag.AutoDestroy, true)
+    // not spammy projectiles
+    pause(250)
 })
 info.onLifeZero(function () {
     // game over when life hits 0
@@ -22,7 +22,7 @@ effects.starField.startScreenEffect()
 // the title screen and controls
 game.splash("welcome", "arrow keys move, A fire")
 // player sprite
-player = sprites.create(assets.image`Placeholder`, SpriteKind.Player)
+player = sprites.create(assets.image`playerSprite`, SpriteKind.Player)
 // moving player sprite
 controller.moveSprite(player, 75, 0)
 // player position at start
