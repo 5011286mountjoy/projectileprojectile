@@ -17,6 +17,10 @@ info.onLifeZero(function () {
     // game over when life hits 0
     game.over(false, effects.melt)
 })
+sprites.onOverlap(SpriteKind.playerProt, SpriteKind.Enemy, function (sprite, otherSprite) {
+    info.changeScoreBy(1)
+    sprite.destroy()
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.bossProt, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
     player.setFlag(SpriteFlag.Ghost, true)
@@ -45,6 +49,11 @@ let boss = sprites.create(assets.image`BOSS`, SpriteKind.Enemy)
 boss.setPosition(75, 25)
 boss.setStayInScreen(true)
 music.setVolume(51)
+game.onUpdate(function () {
+    if (info.score() == 60) {
+        game.over(true, effects.splatter)
+    }
+})
 game.onUpdateInterval(1000, function () {
     bossProjectile = sprites.createProjectileFromSprite(assets.image`BOSSPROJECTILE`, boss, randint(-5, 5), 50)
     bossProjectile.setKind(SpriteKind.bossProt)
@@ -54,13 +63,4 @@ forever(function () {
 })
 game.onUpdateInterval(500, function () {
     boss.x += randint(-5, 5)
-})
-game.onUpdate(function () {
-    if (info.score() == 60) {
-        game.over(true, effects.splatter)
-    }
-})
-sprites.onOverlap(SpriteKind.playerProt, SpriteKind.Enemy, function (sprite, otherSprite) {
-    info.changeScoreBy(1)
-    sprite.destroy()
 })
