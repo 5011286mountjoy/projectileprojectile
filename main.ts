@@ -66,7 +66,7 @@ game.onUpdate(function () {
         game.over(true, effects.splatter)
     }
 })
-game.onUpdateInterval(5000, function () {
+game.onUpdateInterval(5500, function () {
     bossProjectile = sprites.createProjectileFromSprite(assets.image`Lime`, boss, -15, 50)
     bossProjectile = sprites.createProjectileFromSprite(assets.image`Lime`, boss, 0, 50)
     bossProjectile = sprites.createProjectileFromSprite(assets.image`Lime`, boss, 15, 50)
