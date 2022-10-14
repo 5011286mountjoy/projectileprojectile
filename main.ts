@@ -3,17 +3,15 @@ namespace SpriteKind {
     export const bossProt = SpriteKind.create()
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (game.runtime() >= 5000) {
-        music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 1600, 1, 255, 0, 300, SoundExpressionEffect.None, InterpolationCurve.Curve), SoundExpressionPlayMode.UntilDone)
-        // player firing
-        playerProjectile = sprites.createProjectileFromSprite(assets.image`Laser`, player, 0, -50)
-        // protjectile different so you dont die when you fire
-        playerProjectile.setKind(SpriteKind.playerProt)
-        // should destroy the player protjectile after passing top
-        playerProjectile.setFlag(SpriteFlag.AutoDestroy, true)
-        // not spammy projectiles
-        pause(20)
-    }
+    music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 1600, 1, 255, 0, 300, SoundExpressionEffect.None, InterpolationCurve.Curve), SoundExpressionPlayMode.UntilDone)
+    // player firing
+    playerProjectile = sprites.createProjectileFromSprite(assets.image`Laser`, player, 0, -50)
+    // protjectile different so you dont die when you fire
+    playerProjectile.setKind(SpriteKind.playerProt)
+    // should destroy the player protjectile after passing top
+    playerProjectile.setFlag(SpriteFlag.AutoDestroy, true)
+    // not spammy projectiles
+    pause(20)
 })
 info.onScore(60, function () {
     game.splash("CONGRATS", "You have defeated the space coffee van")
